@@ -2,19 +2,16 @@
 
 <table>
   <tr>
-    <th>Question</th>
-    <th>Answer</th>
+    <th>User Emails</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @users.each do |question| %>
+<% @users.each do |user| %>
   <tr>
     <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_question_path(question) %></td>
-    <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

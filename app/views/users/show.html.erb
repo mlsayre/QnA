@@ -1,2 +1,11 @@
-<% @user.questions.each do |question| %>
+<p id="notice"><%= notice %></p>
 
+<% @user.questions.each do |query| %>
+<tr>
+  <td><%= link_to query.question, query %></td>
+</tr>
+
+<tr>
+  <td><%= link_to query.answer, query %></td>
+</tr>
+<% end %>
